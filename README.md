@@ -94,4 +94,3 @@ Example Response:
 ```
 =======
 # react-hooks-plantshop-cr-vite
->>>>>>> 14e4c4bff300e2bdba7a7dd13e05da5fc4d3cb1d
