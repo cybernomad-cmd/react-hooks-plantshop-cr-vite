@@ -5,13 +5,13 @@ import PlantPage from "./PlantPage";
 function App() {
   const [plants, setPlants] = useState([]);
   const [search, setSearch] = useState("");
+
   useEffect(() => {
     fetch("http://localhost:6001/plants")
       .then((r) => r.json())
       .then((data) => setPlants(data));
   }, []);
 
-  // Add new plant
   function handleAddPlant(newPlant) {
     setPlants([...plants, newPlant]);
   }
@@ -25,7 +25,6 @@ function App() {
 
     setPlants(updatedPlants);
   }
-
   const filteredPlants = plants.filter((plant) =>
     plant.name.toLowerCase().includes(search.toLowerCase())
   );
